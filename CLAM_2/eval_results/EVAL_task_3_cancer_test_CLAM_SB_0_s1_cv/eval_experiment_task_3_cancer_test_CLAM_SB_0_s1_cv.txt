@@ -1,0 +1,1 @@
+{'task': 'task_3_cancer_test', 'split': 'test', 'save_dir': './eval_results/EVAL_task_3_cancer_test_CLAM_SB_0_s1_cv', 'models_dir': '/home/Drivessd2tb/dlbl_data/Mohit/results/task_3_cancer_test_CLAM_SB_0_s1', 'model_type': 'clam_sb', 'drop_out': 0.25, 'model_size': 'small'}
