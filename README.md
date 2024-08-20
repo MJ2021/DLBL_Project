@@ -1,6 +1,6 @@
 # DLBL_Project
 
-Generate the thumbnails of your images using the file wsi_to_thumbnail.py and specify the paths accordingly
+Generate the thumbnails of your images using the file wsi_to_thumbnail.py to have an easy visualization of images
 
 Given below is the process to be followed to get the desired results :
 1. First put all the slides in a folder and go inside the CLAM folder
@@ -15,3 +15,16 @@ Given below is the process to be followed to get the desired results :
 10. Create a Data Root Directory folder as mentioned in the readme file in CLAM folder
 11. Now create the splits for train, val and test. Use the create_splits_seq.py for this purpose, add or change the task in the final according to your requirement and the number of classes.
 12. Now you can run the main.py and eval.py, look at the readme file of CLAM folder to understand in detail about the hyperparameters and the use of these files
+13. To verify that the model is focussing on the exact region of interest (tumor), one can observe the heatmaps for any WSI image by running the create_heatmaps.py
+14. Modify the path to the pt files folder and h5 files folder in this file
+15. Now create a .yaml file with the required specifications and paths (refer the clam_8.yaml and modify it as per your requirement)
+16. Now create a process list which contains the list of slides along with their labels for which you want to generate the heatmap
+17. Also create a csv preset file and modify the parameters as per your model (refer task_3_cancer_test_preset.csv)
+
+Further steps are for doing the morphological analysis of the heatmaps and the high attention regions :
+
+18. Run the "extarct_patches_from_h5.py" after giving the path of heatmap output to generate the csv file which has the coordinates along with the attention values for each patch
+19. Now run the "create_high_attention_patches_from_csv.py" and give the required paths in this file, now you can specify the number of high attention patches that you want for further analysis
+20. All further analysis are done in a notebook file "Patch_Analysis.ipynb", the notebook is self sufficient in explaining
+
+Thereby you can conclude all the results of this project.
